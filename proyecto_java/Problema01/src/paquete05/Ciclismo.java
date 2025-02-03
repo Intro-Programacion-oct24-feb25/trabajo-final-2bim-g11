@@ -16,7 +16,7 @@ public class Ciclismo {
         String mensaje;
         String nombre;
         int edad;
-        String tipociCiclismo;
+        String tipoCiclismo;
         String marcaBicicleta;
         System.out.print("Ingrese el nombre del participante: ");
         nombre = entrada.nextLine();
@@ -24,7 +24,7 @@ public class Ciclismo {
         edad = entrada.nextInt();
         entrada.nextLine();
         System.out.print("Ingrese el tipo de ciclismo (montaña,ruta,urbano): ");
-        String tipoCiclismo = entrada.nextLine();
+        tipoCiclismo = entrada.nextLine();
         System.out.print("Ingrese la ciudad: ");
         String ciudad = entrada.nextLine();
         System.out.print("Ingrese la marca de bicicleta preferida: ");
