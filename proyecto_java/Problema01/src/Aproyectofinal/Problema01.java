@@ -29,7 +29,7 @@ public class Problema01 {
         String continuar;
         String informacion;
         String reporte;
-        int[] participantesRegistrados = new int[7];
+        int[] participantes = new int[7];
         String[] actividades = {"Fútbol", "Natación", "Atletismo",
             "Basquetbol", "Ciclismo", "Tenis", "Yoga"};
         do {
@@ -42,37 +42,31 @@ public class Problema01 {
             opcion = entrada.nextInt();
             if (opcion == 1) {
                 Futbol.registrarParticipanteFutbol();
-                participantesRegistrados[0] = participantesRegistrados[0] + 1;
+                participantes[0] = participantes[0] + 1;
             } else {
                 if (opcion == 2) {
                     Natacion.registrarParticipanteNatacion();
-                    participantesRegistrados[1] = participantesRegistrados[1] + 
-                            1;
+                    participantes[1] = participantes[1] + 1;
                 } else {
                     if (opcion == 3) {
                         Atletismo.registrarParticipanteAtletismo();
-                        participantesRegistrados[2] = participantesRegistrados
-                                [2]+ 1;
+                        participantes[2] = participantes[2]+ 1;
                     } else {
                         if (opcion == 4) {
                             Basquetbol.registrarParticipanteBasquetbol();
-                            participantesRegistrados[3] =
-                                    participantesRegistrados[3]+ 1;
+                            participantes[3] = participantes[3]+ 1;
                         } else {
                             if (opcion == 5) {
                                 Ciclismo.registrarParticipanteCiclismo();
-                                participantesRegistrados[4] = 
-                                        participantesRegistrados[4]+ 1;
+                                participantes[4] = participantes[4]+ 1;
                             } else {
                                 if (opcion == 6) {
                                     Tenis.registrarParticipanteTenis();
-                                    participantesRegistrados[5] = 
-                                            participantesRegistrados[5]+ 1;
+                                    participantes[5] = participantes[5]+ 1;
                                 } else {
                                     if (opcion == 7) {
                                         Yoga.registrarParticipanteYoga();
-                                        participantesRegistrados[6] = 
-                                                participantesRegistrados[6]+ 1;
+                                        participantes[6] = participantes[6]+ 1;
                                     }
                                 }
                             }
@@ -86,12 +80,11 @@ public class Problema01 {
             
         }while (continuar.equals("S"));
         for(contador=0;contador<7;contador++){
-            totalParticipantes= totalParticipantes+participantesRegistrados
-                    [contador];
+            totalParticipantes= totalParticipantes+participantes[contador];
         }
         informacion = Reporte.obtenerInformacion(totalParticipantes);
         System.out.println(informacion);
-        reporte = Reporte.obtenerReporte(actividades,participantesRegistrados);
+        reporte = Reporte.obtenerReporte(actividades,participantes);
         System.out.println(reporte);
         
         

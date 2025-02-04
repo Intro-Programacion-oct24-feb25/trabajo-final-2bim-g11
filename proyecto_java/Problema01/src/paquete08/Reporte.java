@@ -28,12 +28,12 @@ public class Reporte {
         return cadena;
     }
     public static String obtenerReporte(String[] actividades, int[] 
-            participantesRegistrados) {
+            participantes) {
         String reporte;
         reporte= "Las actividades ingresadas son:\n";
         for(int i=0; i<actividades.length;i++){
             reporte= reporte+(i+1)+ " Numero de participantes " + 
-                     actividades[i]+":" + participantesRegistrados[i]+"\n";
+                     actividades[i]+":" + participantes[i]+"\n";
         }
         return reporte;
     }
